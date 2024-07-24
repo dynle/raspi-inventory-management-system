@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Shop</title>
+</head>
+<body>
+
+    <h1>Hello!</h1><br>
+    <div id="messages"></div>
+    <div id="container"></div>
+<script>
+        const socket = new WebSocket('ws://' + window.location.host + '/ws/some_path/');
+
+        socket.onmessage = function(e) {
+            console.log(e)
+            const data = JSON.parse(e.data);
+            const messages = document.getElementById('messages');
+            const container = document.getElementById('container');
+
+            const message = document.createElement('div');
+            message.textContent = data.message;
+            console.log(data);
+            console.log(data.product);
+            messages.appendChild(message);
+
+            var face_img = new Image(350, 350);
+            face_img.src = data.message;
+
+            var prod_img = new Image(350, 350);
+            prod_img.src = data.product;
+
+
+            face_img.id = "face";
+            prod_img.id = "product";
+            face_img.className = "images";
+            prod_img.className = "images";
+            container.appendChild(face_img);
+            container.appendChild(prod_img);
+            //document.body.append(face_img);
+            //document.body.append(prod_img);
+            document.head.insertAdjacentHTML("beforeend", `<style>.images{margin: 100px;} #container{text-align:center;}</style>`);
+
+
+        };
+
+</script>
+</body>
+</html>
