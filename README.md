@@ -58,8 +58,6 @@ The Raspbeery Pi Inventory Management System project was initiated to improve th
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Built With
 
 * [Raspberry Pi](https://www.raspberrypi.org/)
@@ -70,6 +68,7 @@ The Raspbeery Pi Inventory Management System project was initiated to improve th
 * [Face Recognition](https://github.com/ageitgey/face_recognition)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- GETTING STARTED -->
@@ -115,25 +114,6 @@ To get a local copy up and running follow these steps.
 9. Connect three raspberry pi devices and the laptop on the same network
 10. Open the HTML page using the django server ip address with the other raspberry pi with the touch display to see detection results
 
-
-
-
-
-<!-- 3. Install Python dependencies
-  ```sh
-  pip install -r requirements.txt
-  ```
-
-4. Set up the SQLite3 dataset
-  ```sh
-  python manage.py migrate
-  ```
-
-5. Install NPM packages
-  ```sh
-  npm install
-  ``` -->
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -144,6 +124,7 @@ To get a local copy up and running follow these steps.
 To use the system, deploy the Django server, and ensure the Raspberry Pi cameras are connected and running. The Slack chatbot will automatically notify users at the end of the month about their purchase totals.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- LICENSE -->
